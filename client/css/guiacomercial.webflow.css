@@ -1,0 +1,873 @@
+body {
+  background-color: #ede8e8;
+  font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  display: block;
+  margin: 10px auto;
+  padding-top: 30px;
+  font-family: Questrial, sans-serif;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+  text-align: center;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 19px;
+  font-family: Questrial, sans-serif;
+  color: #333;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+h4 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  display: block;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding-right: 10px;
+  background-color: transparent;
+  font-family:'Varela Round', sans-serif;
+  font-size: 17px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.h3-header {
+  margin-top: 6px;
+  padding-left: 10px;
+  font-family: Exo, sans-serif;
+  font-weight: 700;
+}
+.navbar {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  margin-top: 8px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  background-color: transparent;
+}
+.boton-navbar {
+  margin-top: 1px;
+  padding-top: 20px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+}
+.boton-navbar:hover {
+  box-shadow: black 0px 0px 4px 0px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  text-shadow: black 1px 1px 0px;
+}
+.boton-navbar.w--current {
+  color: white;
+}
+.textbock-header {
+  position: absolute;
+  margin-top: 35px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  font-family: Exo, sans-serif;
+}
+.navmenu {
+  float: none;
+}
+.secc-heade {
+  position: relative;
+  height: 1px;
+  background-color: white;
+}
+.cont-header {
+  position: relative;
+}
+.h3-heading {
+  margin-top: 6px;
+  padding-top: 0px;
+  padding-left: 7px;
+}
+.text-header {
+  position: absolute;
+  margin-top: 33px;
+  padding-left: 8px;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+}
+.sec-header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  height: 80px;
+  border-bottom: 0px none transparent;
+  background-color: #f0a748;
+}
+.secc-info {
+  margin-top: 93px;
+}
+.textlogo {
+  display: block;
+  margin-top: 8px;
+  margin-left: 6px;
+  float: left;
+  font-family: Audiowide, sans-serif;
+  color: black;
+  font-size: 28px;
+  text-shadow: none;
+}
+.text2logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 9px;
+  margin-left: 76px;
+  padding-left: 0px;
+  float: none;
+  font-family: Varela, sans-serif;
+  color: black;
+  font-size: 14px;
+  text-align: left;
+  letter-spacing: 0px;
+  text-shadow: none;
+}
+.brand {
+  margin-top: 0px;
+}
+.divsearch {
+  width: 300px;
+  height: 28px;
+  margin-top: 9px;
+  float: right;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: white;
+}
+.navlink {
+  padding: 8px 0px 9px 14px;
+  font-family: Questrial, sans-serif;
+  color: #e8e8e1;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.navlink:hover {
+  color: black;
+  font-weight: 400;
+}
+.secsubheader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
+  margin-top: 160px;
+  background-color: #1a53e4;
+  box-shadow: black 0px 1px 3px -1px;
+}
+.buscar {
+  padding-top: 4px;
+  padding-left: 5px;
+  font-family: Varela, sans-serif;
+  color: #b0abab;
+}
+.secslider {
+  position: relative;
+  z-index: 2;
+  margin-top: 82px;
+  box-shadow: black 0px 1px 13px 0px;
+}
+.slide1 {
+  background-image: url('../images/portadaamecom.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slider {
+  width: auto;
+  height: 333px;
+}
+.slide2 {
+  background-image: url('../images/titulo.jpg');
+  background-position: 50% 79%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide3 {
+  background-image: url('../images/rws.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.secpublis {
+  position: relative;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 0px;
+  background-color: transparent;
+  opacity: 1;
+}
+.divpubli {
+  overflow-x: visible;
+  overflow-y: visible;
+  height: auto;
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: transparent;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.linkpubli {
+  width: 100%;
+  height: auto;
+  min-width: 75px;
+  background-color: #426ea8;
+  text-decoration: none;
+}
+.textpubli {
+  width: auto;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 9px;
+  background-color: transparent;
+  font-family: Audiowide, sans-serif;
+  color: black;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.textpubli.descripcion {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-family: Questrial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+}
+.textpubli.down {
+  padding-right: 15px;
+  float: right;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: right;
+}
+.rowpublis {
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+.imgpubli {
+  position: relative;
+  z-index: 0;
+  display: block;
+  width: auto;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+.divlabel {
+  position: relative;
+  z-index: 2;
+  width: auto;
+  height: auto;
+  background-color: #f0a748;
+}
+.divlabel.down {
+  margin-top: -5px;
+}
+.imgesquinero {
+  position: absolute;
+  top: -6px;
+  right: 0px;
+  bottom: 0px;
+  margin-right: -4px;
+  opacity: 0.95;
+}
+.divlabeldown {
+  margin-top: -5px;
+  background-color: #4db7e8;
+}
+.esquinerodown {
+  position: absolute;
+  left: 0px;
+  bottom: 1px;
+  opacity: 0.95;
+}
+.divrubros {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 4;
+  height: 300px;
+  margin-top: 0px;
+  padding-top: 7px;
+  background-color: white;
+  box-shadow: black 0px 1px 15px -4px;
+}
+.contrubros {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 8;
+  display: none;
+  overflow-x: visible;
+  overflow-y: visible;
+  height: 300px;
+  margin-top: 83px;
+  background-color: transparent;
+}
+.linkrubros {
+  display: block;
+  margin-right: 9px;
+  padding-left: 8px;
+  float: none;
+  clear: none;
+  font-family: Lato, sans-serif;
+  color: #374bbd;
+  font-size: 15px;
+  text-decoration: none;
+  list-style-type: disc;
+}
+.linkrubros:hover {
+  background-color: #426ea8;
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.titulo {
+  position: relative;
+  left: 0px;
+  top: -67px;
+  display: block;
+  margin: 75px auto 0px;
+  padding-top: 9px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family:'Fjalla One', sans-serif;
+  color: #426ea8;
+  text-align: center;
+}
+.linklogo {
+  position: relative;
+  z-index: 0;
+  margin-top: 4px;
+  float: left;
+}
+.navbarra {
+  position: static;
+  height: 38px;
+  margin-top: -32px;
+  background-color: #4db7e8;
+}
+.contmenu {
+  position: relative;
+}
+.colsidebar {
+  height: 670px;
+  background-color: #d2d5d6;
+}
+.colpublis {
+  padding-top: 0px;
+}
+.htmlclima {
+  width: 220px;
+  padding-top: 11px;
+}
+.txtvisitas {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  padding-left: 3px;
+  background-color: #474545;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+.htmlcontador {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.divtapacont {
+  position: relative;
+  height: 20px;
+  margin-top: -16px;
+  background-color: #474545;
+}
+.slide4 {
+  background-image: url('../images/medioslider.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide5 {
+  background-image: url('../images/cuartoslider.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.secmasinfo {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
+  display: none;
+  overflow-x: visible;
+  overflow-y: visible;
+  margin-top: 83px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  background-color: rgba(26, 25, 25, 0.94);
+}
+.contmasinfo {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 450px;
+  padding-bottom: 16px;
+  background-color: rgba(0, 0, 0, 0.90);
+}
+.imgmasinfo {
+  margin-top: 15px;
+  padding-left: 0px;
+}
+.txtmasinfo1 {
+  font-family: Questrial, sans-serif;
+  color: white;
+  font-size: 17px;
+}
+.parramasinfo {
+  margin-top: 11px;
+  font-family: Abel, sans-serif;
+  color: #ccc6c6;
+  font-size: 16px;
+}
+.linkmasinfo {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: Questrial, sans-serif;
+  font-size: 16px;
+}
+.txtmasinfo2 {
+  margin-top: 8px;
+  font-family: Questrial, sans-serif;
+  color: white;
+  font-size: 15px;
+  font-style: italic;
+}
+.conttelefonos {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 8;
+  display: none;
+  height: 300px;
+  margin-top: 83px;
+  background-color: white;
+}
+.divtelefonos {
+  height: 300px;
+  margin-top: 0px;
+  padding-top: 21px;
+  font-size: 15px;
+}
+.listitemtelefonos {
+  font-family:'Varela Round', sans-serif;
+}
+.clickinfo {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: Questrial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+}
+.secrubrostel {
+  background-color: #c21515;
+}
+.secinfo {
+  height: auto;
+  margin-top: 85px;
+}
+.mapmasinfo {
+  margin-top: 26px;
+  margin-bottom: 33px;
+}
+.direccionmasinfo {
+  margin-top: 9px;
+  font-family: Questrial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+}
+.telmasinfo {
+  margin-top: 9px;
+  margin-bottom: 10px;
+  font-family: Questrial, sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  text-align: center;
+}
+.webmasinfo {
+  display: block;
+  margin-top: 5px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  text-align: center;
+}
+.secclasificados {
+  margin-top: 99px;
+  margin-bottom: 33px;
+}
+.txtclasif {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.txtfecha {
+  font-family: Questrial, sans-serif;
+}
+.txttel-fono {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.txtdatos {
+  margin-top: 14px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.linkclasif {
+  display: block;
+  margin-top: 13px;
+  padding: 15px 5px 5px;
+  border: 1px solid #a3a0a0;
+  color: #454343;
+  text-decoration: none;
+}
+.form {
+  margin-top: 45px;
+}
+.botonenviar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.envienos {
+  margin-bottom: 24px;
+}
+.rowdatos {
+  border: 2px solid #918d8d;
+}
+.sliderdatos {
+  height: 400px;
+}
+.slidedatos1 {
+  background-image: url('../images/pantalla.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.slidedatos2 {
+  background-image: url('../images/cristina.jpg');
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.secfooter {
+  height: 200px;
+  margin-top: 10px;
+  background-color: #383636;
+}
+.imgface {
+  display: block;
+  margin-top: 49px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.imgvgg {
+  display: block;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+}
+.imgtelvgg {
+  display: block;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.txtfooter {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #575454;
+  font-family: Abel, sans-serif;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .navmenu {
+    background-color: white;
+  }
+  .navmenu2 {
+    margin-top: 3px;
+    background-color: #a5c474;
+  }
+  .menuboton {
+    margin-top: -11px;
+    background-color: transparent;
+    color: white;
+  }
+  .menuboton.w--open {
+    background-color: transparent;
+  }
+  .textlogo {
+    text-shadow: none;
+  }
+  .text2logo {
+    display: inline;
+    margin-left: 76px;
+    padding-left: 0px;
+    font-size: 14px;
+    text-shadow: none;
+  }
+  .navlink {
+    color: #4f4f4d;
+  }
+  .slider {
+    height: auto;
+  }
+  .divpubli {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .textpubli {
+    font-size: 12px;
+  }
+  .textpubli.descripcion {
+    font-size: 11px;
+  }
+  .textpubli.down {
+    font-size: 8px;
+  }
+  .divrubros {
+    overflow-x: visible;
+    overflow-y: visible;
+    height: auto;
+  }
+  .contrubros {
+    position: fixed;
+    z-index: 19;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+  .contmenu {
+    z-index: 10;
+    color: #333;
+  }
+  .htmlclima {
+    width: auto;
+  }
+  .navmenuu {
+    position: relative;
+    margin-top: 4px;
+    background-color: #4db7e8;
+    color: #333;
+  }
+}
+@media (max-width: 767px) {
+  .textbock-header {
+    padding-left: 20px;
+  }
+  .navmenu {
+    background-color: white;
+  }
+  .textlogo {
+    font-size: 22px;
+    text-shadow: none;
+  }
+  .text2logo {
+    margin-left: 80px;
+    padding-left: 0px;
+    font-size: 13px;
+    text-shadow: none;
+  }
+  .divsearch {
+    width: 250px;
+    margin-right: 6px;
+    padding-right: 0px;
+  }
+  .secslider {
+    height: 189px;
+  }
+  .slide1 {
+    background-size: contain;
+  }
+  .slide2 {
+    background-size: contain;
+  }
+  .slide3 {
+    background-size: contain;
+  }
+  .divpubli {
+    display: block;
+    width: 51%;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .textpubli.down {
+    float: right;
+    font-size: 12px;
+  }
+  .divlabeldown {
+    position: relative;
+    width: auto;
+  }
+  .divrubros {
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 200px;
+  }
+  .linklogo {
+    margin-left: 4px;
+  }
+  .colsidebar {
+    margin-top: 20px;
+  }
+  .htmlclima {
+    display: block;
+    width: 220px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .slide4 {
+    background-size: contain;
+  }
+  .slide5 {
+    background-size: contain;
+  }
+  .conttelefonos {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 479px) {
+  .menuboton {
+    margin-top: -11px;
+  }
+  .textlogo {
+    font-size: 17px;
+    text-shadow: none;
+  }
+  .text2logo {
+    display: block;
+    margin-top: -23px;
+    margin-left: 58px;
+    font-size: 9px;
+    text-shadow: none;
+  }
+  .slide1 {
+    height: auto;
+    background-position: 50% 50%;
+  }
+  .slider {
+    height: auto;
+  }
+  .slide2 {
+    background-position: 50% 50%;
+  }
+  .slide3 {
+    background-position: 50% 50%;
+  }
+  .divpubli {
+    width: 80%;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .textpubli.down {
+    width: auto;
+  }
+  .divrubros {
+    height: 300px;
+  }
+  .linklogo {
+    width: 14.3%;
+  }
+  .colsidebar {
+    margin-top: 1px;
+  }
+  .conttelefonos {
+    margin-top: 83px;
+  }
+}
+

@@ -1,0 +1,25 @@
+{
+  "name": "VGG",
+  "version": "0.0.0",
+  "authors": [
+    "Bohmaster <voidhmaster@gmail.com>"
+  ],
+  "description": "VGG",
+  "license": "MIT",
+  "homepage": "www.guiacomercialvgg.com.ar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.13.2",
+    "angular-resource": "~1.4.3"
+  }
+}

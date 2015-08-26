@@ -1,0 +1,38 @@
+{
+  "name": "Comercio",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "nombre": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "promocion": {
+      "type": "string"
+    },
+    "imagenComercio": {
+      "type": "string"
+    },
+    "imagenes": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
