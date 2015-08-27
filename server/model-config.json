@@ -33,5 +33,13 @@
   "Categoria": {
     "dataSource": "db",
     "public": true
+  },
+  "container": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Mail": {
+    "dataSource": "db",
+    "public": true
   }
 }

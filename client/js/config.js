@@ -12,6 +12,10 @@ angular.module('VGG')
         url: '/home',
         templateUrl: 'views/home.html'
       })
+      .state('app.comercio', {
+        url: '/detalle',
+        templateUrl: 'views/comercios/detalle.html'
+      })
       .state('app.admin', {
         url: '/admin',
         templateUrl: 'views/admin.html',
@@ -19,7 +23,7 @@ angular.module('VGG')
       })
       .state('app.admin.comercios', {
         url: '/comercios',
-        templateUrl: 'views/comercios.html',
+        templateUrl: 'views/comercios/agregar.html',
         controller: 'ComercioController'
       });
 

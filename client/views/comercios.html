@@ -3,12 +3,16 @@
 <form name="ComercioForm">
 
   <input type="text" ng-model="comercio.nombre"/> <br/>
-  <input type="text" ng-model="comercio.categoria"/> <br/>
+  <input type="text" id="rubro" class="form-control focus margin" name="rubro" list="rubros"
+         placeholder="Seleccione rubro" autocomplete="off" required>
+  <datalist id="rubros">
+    <option ng-repeat="r in rubros" value="{{r.nombre}}" id="{{r.id}}">
+  </datalist>
   <input type="text" ng-model="comercio.direccion"/> <br/>
   <input type="text" ng-model="comercio.telefono"/> <br/>
   <input type="text" ng-model="comercio.email"/> <br/>
   <textarea cols="30" rows="10" ng-model="comercio.descripcion"></textarea> <br/>
-  <textarea cols="30" rows="10" ng-mode="comercio.promocion"></textarea> <br/>
+  <textarea cols="30" rows="10" ng-model="comercio.promocion"></textarea> <br/>
   <input type="file" file-input="files" multiple/> <br/>
 
 </form>
