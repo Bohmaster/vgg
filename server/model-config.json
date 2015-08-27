@@ -26,6 +26,10 @@
     "dataSource": "db",
     "public": false
   },
+  "Email": {
+    "dataSource": "zohoMail",
+    "public": true
+  },
   "Comercio": {
     "dataSource": "db",
     "public": true
@@ -39,7 +43,7 @@
     "public": true
   },
   "Mail": {
-    "dataSource": "db",
+    "dataSource": "zohoMail",
     "public": true
   }
 }

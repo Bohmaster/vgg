@@ -1,9 +1,18 @@
 'use strict';
 
 angular.module('VGG')
-  .controller('MainController', function($rootScope, $scope) {
+  .controller('MainController', function($rootScope, $scope, Mail) {
 
-    $rootScope.greet = "Hello!";
+    Mail.sendMail({
+      text: 'Sabe!'
+    },
+      function(data) {
+        console.log(data);
+      },
+      function(err) {
+        console.log(err);
+      }
+    );
 
   })
   .controller('AdminController', function($scope) {

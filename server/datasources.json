@@ -8,5 +8,22 @@
     "connector": "loopback-component-storage",
     "provider": "filesystem",
     "root": "server/storage"
+  },
+  "zohoMail": {
+    "name": "zohoMail",
+    "connector": "mail",
+    "transports": [{
+      "type": "smtp",
+      "host": "smtp.zoho.com",
+      "secure": true,
+      "port": 465,
+      "tls": {
+        "rejectUnauthorized": false
+      },
+      "auth": {
+        "user": "tato@guiacomercialvgg.com.ar",
+        "pass": "k1k1r1ki"
+      }
+    }]
   }
 }
