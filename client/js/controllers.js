@@ -4,10 +4,12 @@ angular.module('VGG')
   .controller('MainController', function($rootScope, $scope, Mail) {
 
     Mail.sendMail({
-      text: 'Sabe!'
+      data: {
+        text: "sabe"
+      }
     },
       function(data) {
-        console.log(data);
+        console.log(data.message);
       },
       function(err) {
         console.log(err);

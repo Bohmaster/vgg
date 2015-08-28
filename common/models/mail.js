@@ -2,6 +2,8 @@ module.exports = function(Mail) {
 
   Mail.sendMail = function(data, cb) {
 
+    console.log(data);
+
     Mail.app.models.Email.send({
 
       to: 'voidhmaster@gmail.com',
@@ -17,7 +19,7 @@ module.exports = function(Mail) {
       }
 
       console.log(data.text);
-      cb(null, 'Mail enviado!');
+      cb(null, data);
 
     });
 
