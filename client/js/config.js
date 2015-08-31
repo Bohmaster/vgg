@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('VGG')
+
   .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
@@ -13,8 +14,9 @@ angular.module('VGG')
         templateUrl: 'views/home.html'
       })
       .state('app.comercio', {
-        url: '/detalle',
-        templateUrl: 'views/comercios/detalle.html'
+        url: '/detalle/:comercioId',
+        templateUrl: 'views/comercios/detalle.html',
+        controller: "ComercioController"
       })
       .state('app.admin', {
         url: '/admin',
@@ -30,6 +32,7 @@ angular.module('VGG')
     $urlRouterProvider.otherwise('/app/home');
 
   })
+
   .run(function($rootScope) {
 
     $rootScope.$on('$viewContentLoaded', function(event) {

@@ -1602,7 +1602,7 @@ module.factory(
          *
          * @description
          *
-         * Logout a user with access token
+         * Logout a user with access token.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1644,7 +1644,7 @@ module.factory(
          *
          * @description
          *
-         * Confirm a user registration with email verification token
+         * Confirm a user registration with email verification token.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1678,7 +1678,7 @@ module.factory(
          *
          * @description
          *
-         * Reset password for a user with email
+         * Reset password for a user with email.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -3438,9 +3438,7 @@ module.factory(
          *
          * @description
          *
-         * <em>
-         * (The remote method definition does not provide any description.)
-         * </em>
+         * Manda un mail
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -3449,7 +3447,7 @@ module.factory(
          *
          * @param {Object} postData Request data.
          *
-         *  - `data` – `{object=}` - 
+         *  - `data` – `{object=}` - Manda un mail
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.

@@ -29,10 +29,28 @@
       "type": [
         "string"
       ]
+    },
+    "horarios": {
+      "type": "string"
+    },
+    "pagina": {
+      "type": "string"
+    },
+    "direccionMapa": {
+      "type": "string"
+    },
+    "rubro": {
+      "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "categoria": {
+      "type": "hasOne",
+      "model": "Categoria",
+      "foreignKey": "categoria"
+    }
+  },
   "acls": [],
   "methods": []
 }

@@ -21,8 +21,6 @@ app.start = function() {
     app.emit('started');
     console.log('Web server listening at: %s', app.get('url'));
     console.log(path.join(__dirname, 'storage'));
-
-    console.log(app.models.Email);
   });
 };
 

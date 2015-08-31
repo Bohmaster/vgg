@@ -12,18 +12,20 @@
   "zohoMail": {
     "name": "zohoMail",
     "connector": "mail",
-    "transports": [{
-      "type": "smtp",
-      "host": "smtp.zoho.com",
-      "secure": true,
-      "port": 465,
-      "tls": {
-        "rejectUnauthorized": false
-      },
-      "auth": {
-        "user": "tato@guiacomercialvgg.com.ar",
-        "pass": "k1k1r1ki"
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.zoho.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "tato@guiacomercialvgg.com.ar",
+          "pass": "k1k1r1ki"
+        }
       }
-    }]
+    ]
   }
 }

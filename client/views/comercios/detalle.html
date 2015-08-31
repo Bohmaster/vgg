@@ -1,11 +1,16 @@
 <div class="w-section secinfo">
-  <h1>Nombre comercios</h1>
-  <h3>Rubro</h3>
+  <h1>{{ comercio.nombre }}</h1>
+  <h3>{{ comercio.rubro }}</h3>
   <div class="w-container">
     <div class="w-slider sliderdatos" data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1">
       <div class="w-slider-mask maskdatos">
-        <div class="w-slide slidedatos1"></div>
-        <div class="w-slide slidedatos2"></div>
+
+        <div class="w-slide" ng-repeat="img in comercio.imgs track by $index">
+
+          <img src="storage/images/{{ img }}" alt=""/>
+
+        </div>
+
       </div>
       <div class="w-slider-arrow-left">
         <div class="w-icon-slider-left"></div>
@@ -15,20 +20,22 @@
       </div>
       <div class="w-slider-nav w-round"></div>
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+    <p compile="{{ comercio.descripcion }}"></p>
     <div class="w-row rowdatos">
       <div class="w-col w-col-6">
-        <div class="direccionmasinfo">Direccion: San Martín 2344&nbsp;&nbsp;Villa Gdor. Gálvez</div>
-        <div class="telmasinfo">Horarios: Lunes a Viernes 9 a 16 hs.</div>
-        <div class="telmasinfo">Teléfono: 4976765</div>
+        <div class="direccionmasinfo">Direccion: {{ comercio.direccion }}</div>
+        <div class="telmasinfo">Horarios: {{ comercio.horarios }}</div>
+        <div class="telmasinfo">Teléfono: {{ comercio.telefono }}</div>
       </div>
-      <div class="w-col w-col-6"><a class="webmasinfo" href="#">Email@correo.com.ar</a><a class="webmasinfo" href="#">Comercio.com.ar</a>
+      <div class="w-col w-col-6">
+        <a class="webmasinfo" href="#">{{ comercio.email }}</a>
+        <a class="webmasinfo" href="#">{{ comercio.pagina }}</a>
       </div>
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+    <p compile="{{ comercio.promocion }}"></p>
     <div class="w-row">
       <div class="w-col w-col-6">
-        <iframe width="450" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Juan%20Manuel%20de%20Rosas%201802%2C%20Rosario%2C%20Santa%20Fe%20Province%2C%20Argentina&key=AIzaSyAelQR2x4P2Md932GBR3txgmsE35S0ZSuU" allowfullscreen></iframe>
+        <mapa dir="{{ comercio.direccionMapa }}"></mapa>
       </div>
       <div class="w-col w-col-6 webmasinfo">
         <div class="w-form">

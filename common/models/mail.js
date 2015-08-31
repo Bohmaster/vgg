@@ -2,15 +2,14 @@ module.exports = function(Mail) {
 
   Mail.sendMail = function(data, cb) {
 
-    console.log(data);
 
     Mail.app.models.Email.send({
 
       to: 'voidhmaster@gmail.com',
       from: 'tato@guiacomercialvgg.com.ar',
-      subject: 'my subject',
+      subject: '1, 2, 3 probando...',
       text: data.text,
-      html: 'my <em>html</em>' + data.text
+      html: '<em>Mensaje:</em> ' + data.text
 
     }, function(err, mail) {
 
@@ -18,7 +17,6 @@ module.exports = function(Mail) {
         cb(err);
       }
 
-      console.log(data.text);
       cb(null, data);
 
     });
@@ -26,13 +24,38 @@ module.exports = function(Mail) {
   };
 
   Mail.remoteMethod(
+
     'sendMail',
+
     {
       accepts: {
+
         arg: 'data',
-        type: 'object'
+        type: 'object',
+        description: "Manda un mail"
+        //http: function(ctx) {
+
+          //var req = ctx.req;
+
+          //console.log(req.body.data);
+
+          //var result = req.body.data;
+
+          //return result;
+
+        //}
+
       },
-      returns: {arg: 'message', type: 'string'}
+
+      returns: {
+
+        arg: 'message',
+        type: 'string'
+
+      },
+
+      description: "Manda un mail"
+
     }
   );
 
