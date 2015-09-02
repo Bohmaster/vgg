@@ -149,6 +149,12 @@ angular.module('VGG')
 
   .controller('ComercioController', function($scope, $http, $stateParams, Comercio, Categoria, Mail) {
 
+    if ($stateParams.consulta) {
+
+      $scope.merca = $stateParams.consulta;
+
+    }
+
     if ($stateParams.rubroId) {
 
       $scope.rubro = Categoria.findById({id: $stateParams.rubroId});

@@ -1,8 +1,8 @@
 <div class="w-section secinfo">
   <h1>{{ comercio.nombre }}</h1>
-  <h3>{{ rubro.nombre }}</h3>
+  <h3 style="color: #f0a748;">{{ rubro.nombre }}</h3>
   <div class="w-container">
-    <div class="w-slider sliderdatos" data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1">
+    <div class="w-slider sliderdatos" style="margin-bottom: 30px;" data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1">
       <div class="w-slider-mask maskdatos">
 
         <div class="w-slide" ng-repeat="img in comercio.imagenes track by $index">
@@ -21,30 +21,30 @@
       <div class="w-slider-nav w-round"></div>
     </div>
 
-    <div style="margin: 50px;">
+    <div style="padding: 50px; background: #f0a748; width: 100%;">
       <p compile="{{ comercio.descripcion }}"></p>
     </div>
 
     <div class="w-row rowdatos" style="padding: 30px;">
       <div class="w-col w-col-6">
-        <div class="direccionmasinfo"> Direccion: {{ comercio.direccion }}</div>
-        <div class="telmasinfo"> Horarios: {{ comercio.horarios }}</div>
-        <div class="telmasinfo"> Teléfono: {{ comercio.telefono }}</div>
+        <div class="direccionmasinfo"><div class="h3">Direccion:</div> {{ comercio.direccion }}</div>
+        <div class="telmasinfo"> <div class="h3">Horarios:</div>{{ comercio.horarios }}</div>
+        <div class="telmasinfo"> <div class="h3">Teléfono:</div> {{ comercio.telefono }}</div>
       </div>
       <div class="w-col w-col-6">
-        <div class="telmasinfo">Email: {{ comercio.email }}</a></div>
-        <div class="telmasinfo">Sitio Web: {{ comercio.pagina }}</div>
+        <div class="telmasinfo"> <div class="h3">Email:</div> {{ comercio.email }}</a></div>
+        <div class="telmasinfo"> <div class="h3">Pagina Web:</div> {{ comercio.pagina }}</div>
       </div>
     </div>
 
-    <div style="margin:50px;">
+    <div style="padding: 50px; background: #f0a748;">
 
       <p compile="{{ comercio.promocion }}"></p>
 
     </div>
 
 
-    <div class="w-row">
+    <div class="w-row" style="margin-top: 30px;">
       <div class="w-col w-col-6">
         <mapa dir="{{ comercio.direccion }}"></mapa>
       </div>

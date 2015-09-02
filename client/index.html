@@ -47,12 +47,12 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="w-section sec-header">
-  <div class="w-container">
+  <div class="w-container" style="position: relative;">
     <a class="w-inline-block linklogo" href="#"><img src="images/logo.png" width="68" ui-sref="app.home">
     </a>
     <h2 class="textlogo">GUIA COMERCIAL</h2>
-    <div class="divsearch">
-      <input class="buscar" placeholder="Buscar..." ng-model="consulta">
+    <div style="position: absolute; right: 5px; top: 8px;">
+      <input placeholder="Buscar..." ng-model="consulta">
       <button ng-click="buscar()">Buscar</button>
     </div>
   </div>

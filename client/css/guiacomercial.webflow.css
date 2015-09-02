@@ -1,5 +1,5 @@
 body {
-  background-color: #ede8e8;
+  background-color: white;
   font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, sans-serif;
   color: #333;
   font-size: 14px;
@@ -24,15 +24,23 @@ h2 {
   font-weight: 700;
 }
 h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 19px;
+  padding-bottom: 1px;
   font-family: Questrial, sans-serif;
   color: #333;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
+}
+
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 35px !important;
+  line-height: 36px;
+  font-weight: 700;
+  color: white !important;
 }
 h4 {
   margin-top: 0px;
@@ -222,7 +230,7 @@ p {
   position: relative;
   z-index: 2;
   margin-top: 82px;
-  box-shadow: black 0px 1px 13px 0px;
+  margin-bottom: 30px;
 }
 .slide1 {
   background-image: url('../images/portadaamecom.jpg');
@@ -322,8 +330,9 @@ p {
   height: auto;
   background-color: #f0a748;
 }
-.divlabel.down {
+.divlabeldown {
   margin-top: -5px;
+  padding-top: 5px;
 }
 .imgesquinero {
   position: absolute;
@@ -418,8 +427,9 @@ p {
   position: relative;
 }
 .colsidebar {
-  height: 670px;
-  background-color: #d2d5d6;
+  margin-top: 10px;
+  height: auto;
+  background-color: lightgray;
 }
 .colpublis {
   padding-top: 0px;
@@ -621,7 +631,7 @@ p {
   margin-bottom: 24px;
 }
 .rowdatos {
-  border: 2px solid #918d8d;
+  background: lightskyblue;
 }
 .sliderdatos {
   height: 400px;
@@ -639,7 +649,7 @@ p {
 }
 .secfooter {
   height: 200px;
-  margin-top: 10px;
+  margin-top: 40px;
   background-color: #383636;
 }
 .imgface {
@@ -757,11 +767,6 @@ p {
     padding-left: 0px;
     font-size: 13px;
     text-shadow: none;
-  }
-  .divsearch {
-    width: 250px;
-    margin-right: 6px;
-    padding-right: 0px;
   }
   .secslider {
     height: 189px;

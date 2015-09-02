@@ -81,7 +81,7 @@ angular
   .directive('mapa', function($interpolate) {
     return {
       restrict: 'E',
-      template: '<div id="map" style="width: 100%; height: 480px;"></div>',
+      template: '<div id="map" style="width: 100%; height: 350px;"></div>',
       link: function(scope, elem, attrs) {
 
         var geocoder;
