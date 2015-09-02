@@ -18,6 +18,16 @@ angular.module('VGG')
         templateUrl: 'views/comercios/detalle.html',
         controller: "ComercioController"
       })
+      .state('app.rubros', {
+        url: '/rubros/:rubroId',
+        templateUrl: 'views/comercios/rubros.html',
+        controller: "ComercioController"
+      })
+      .state('app.busqueda', {
+        url: '/busqueda/:consulta',
+        templateUrl: 'views/comercios/busqueda.html',
+        controller: "ComercioController"
+      })
       .state('app.admin', {
         url: '/admin',
         templateUrl: 'views/admin.html',

@@ -5,11 +5,11 @@ module.exports = function(Mail) {
 
     Mail.app.models.Email.send({
 
-      to: 'voidhmaster@gmail.com',
+      to: data.email,
       from: 'tato@guiacomercialvgg.com.ar',
-      subject: '1, 2, 3 probando...',
+      subject: 'Consulta',
       text: data.text,
-      html: '<em>Mensaje:</em> ' + data.text
+      html: '<em>Mensaje enviado automáticamente desde La Guia Comercial VGG</em></br> Nombre: ' + data.nombre + "</br> Mensaje: " + data.text
 
     }, function(err, mail) {
 

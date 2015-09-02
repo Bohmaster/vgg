@@ -2,8 +2,143 @@
 
 angular.module('VGG')
 
-  .controller('MainController', function($rootScope, $scope, Mail) {
+  .controller('MainController', function($rootScope, $state, $window, $modal, $scope, Comercio, Categoria  ) {
 
+    var entered = $window.sessionStorage['entered'];
+
+    if (!entered) {
+
+      $modal.open({
+
+        templateUrl: 'views/like.html',
+        size: 'md',
+        controller: function($scope) {
+
+          $scope.message = "Seguinos en facebook!";
+
+          $scope.seguir = function() {
+
+            $window.sessionStorage['entered'] = true;
+            $scope.$close();
+
+          };
+
+        }
+
+      });
+
+    }
+
+    $scope.rubros = [];
+
+    Categoria.find(function(data) {
+
+      $scope.rubros = data;
+
+    });
+
+    $scope.comercios = [];
+
+    function shuffle(array) {
+
+      var currentIndex = array.length, temporaryValue, randomIndex ;
+
+        while (0 !== currentIndex) {
+
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+
+      }
+
+      return array;
+
+    }
+
+    Comercio.find(function(data) {
+
+      $scope.comercios = shuffle(data);
+
+      console.log($scope.comercios);
+
+    });
+
+    $scope.buscar = function() {
+
+      var query = $scope.consulta.toLowerCase();
+
+      var nameQuery = $scope.consulta.toUpperCase();
+
+      console.log(query);
+
+      Comercio.find({
+
+        filter: {
+
+          where: {
+
+            or:
+
+              [
+
+                {
+
+                  nombre: {
+
+                    like: nameQuery + "%"
+
+                  }
+
+                },
+
+                {
+
+                  _descripcion: {
+
+                    like: query + "%"
+
+                  }
+
+                },
+
+                {
+
+                  _promocion: {
+
+                    like: query + "%"
+
+                  }
+
+                }
+
+              ]
+
+          }
+
+        }
+
+      }, function(data) {
+
+        $scope.resultados = data;
+
+        console.log($scope.resultados);
+
+        $state.go('app.busqueda', {
+          params: {
+            consulta: $scope.consulta
+          }
+        });
+
+      }, function(err) {
+
+        console.log(err);
+
+      });
+
+    }
 
   })
 
@@ -14,9 +149,29 @@ angular.module('VGG')
 
   .controller('ComercioController', function($scope, $http, $stateParams, Comercio, Categoria, Mail) {
 
+    if ($stateParams.rubroId) {
+
+      $scope.rubro = Categoria.findById({id: $stateParams.rubroId});
+
+      $scope.resultados = [];
+
+      Comercio.find({
+        filter: {
+          where: {
+            categoriaId: $stateParams.rubroId
+          }
+        }
+      }, function(data) {
+
+        $scope.resultados = data;
+
+      });
+
+    }
+
     if ($stateParams.comercioId) {
 
-      $scope.comercio = []
+      $scope.comercio = [];
 
       Comercio.findById({
 
@@ -48,6 +203,8 @@ angular.module('VGG')
       });
 
     } else {
+
+      $scope.visitante = undefined;
 
       $scope.comercio = {
 
@@ -124,7 +281,9 @@ angular.module('VGG')
 
      Mail.sendMail({
          data: {
-           text: "sabe"
+           nombre: $scope.visitante.nombre,
+           email: $scope.visitante.email,
+           text: $scope.visitante.query
          }
        },
        function(data) {

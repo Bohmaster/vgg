@@ -41,16 +41,16 @@
     },
     "rubro": {
       "type": "string"
+    },
+    "_descripcion": {
+      "type": "string"
+    },
+    "_promocion": {
+      "type": "string"
     }
   },
   "validations": [],
-  "relations": {
-    "categoria": {
-      "type": "hasOne",
-      "model": "Categoria",
-      "foreignKey": "categoria"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": []
 }

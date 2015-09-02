@@ -1,0 +1,31 @@
+<div class="w-section secpublis" style="margin-top: 100px;">
+  <div class="w-container">
+    <div class="w-row">
+      <div class="w-col colpublis">
+
+          <h1>{{ rubro.nombre }}</h1>
+
+        <div class="w-row">
+
+          <div class="w-col w-col-3" ng-repeat="comercio in resultados" ui-sref="app.comercio({comercioId: comercio.id})">
+            <div class="divpubli" data-ix="publis">
+              <a class="w-inline-block linkpubli" href="masinfo.html">
+                <div class="divlabel">
+                  <div class="textpubli">VIVERO AVENIDA</div>
+                  <div class="textpubli descripcion">Todo para su jardin</div>
+                </div>
+                <div class="clickinfo">Click para más info</div><img class="imgpubli" src="storage/images/{{ comercio.imagenComercio }}">
+                <div class="w-clearfix divlabeldown">
+                  <div class="textpubli down">AV.SAN MARTIN 1365 VGG</div>
+                  <div class="textpubli descripcion down">0341-5183408</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

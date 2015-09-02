@@ -54,9 +54,6 @@ angular
   .directive('compile', function($compile) {
     return {
       restrict: 'A',
-      scope: {
-        data: '@compile'
-      },
       compile: function(elem, attrs) {
 
         var x = attrs.compile;
@@ -66,26 +63,60 @@ angular
 
         return function postLink(scope, elem, attrs) {
 
-          var linkFn = $compile(scope.data);
-          var content = linkFn(scope);
-          elem.append(content);
+          attrs.$observe('compile', function(value) {
+
+            console.log(value);
+
+            var linkFn = $compile(value);
+            var content = linkFn(scope);
+            elem.append(content);
+
+          });
 
         }
       }
 
     }
   })
-  .directive('mapa', function($compile) {
+  .directive('mapa', function($interpolate) {
     return {
       restrict: 'E',
+      template: '<div id="map" style="width: 100%; height: 480px;"></div>',
       link: function(scope, elem, attrs) {
 
-          var html = '<iframe width="450" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=' + scope.comercio.direccionMapa + '%20Galvez&key=AIzaSyAelQR2x4P2Md932GBR3txgmsE35S0ZSuU" allowfullscreen></iframe>';
+        var geocoder;
+        var map;
 
-          var linkFn = $compile(html);
-          var content = linkFn(scope);
-          elem.append(content);
+          attrs.$observe('dir', function(value) {
+
+            geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode( { 'address': value}, function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK) {
+
+                var mapOptions = {
+                  zoom: 17,
+                  center: results[0].geometry.location
+                };
+
+                map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                var marker = new google.maps.Marker({
+                  map: map,
+                  position: results[0].geometry.location
+                });
+
+              } else {
+
+                console.log(status);
+
+              }
+
+            });
+
+          });
 
         }
+      }
     }
-  });
+  );

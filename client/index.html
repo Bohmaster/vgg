@@ -35,13 +35,25 @@
   <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
 </head>
 <body>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=961269550603353";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="w-section sec-header">
   <div class="w-container">
-    <a class="w-inline-block linklogo" href="#"><img src="images/logo.png" width="68">
+    <a class="w-inline-block linklogo" href="#"><img src="images/logo.png" width="68" ui-sref="app.home">
     </a>
     <h2 class="textlogo">GUIA COMERCIAL</h2>
     <div class="divsearch">
-      <div class="buscar">Buscar...</div>
+      <input class="buscar" placeholder="Buscar..." ng-model="consulta">
+      <button ng-click="buscar()">Buscar</button>
     </div>
   </div>
   <div class="w-nav navbarra" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
@@ -59,14 +71,17 @@
   <div class="w-container contrubros" data-ix="contenedor-rubros">
     <div class="divrubros" data-ix="rubros">
       <div class="w-row">
-        <div class="w-col w-col-3"><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos y bebidas</a><a class="linkrubros" href="#">Alquiler de cabañas</a><a class="linkrubros" href="#">Automotores</a><a class="linkrubros" href="#">Bares y restoranes</a><a class="linkrubros" href="#">Bicicleterías</a><a class="linkrubros" href="#">Comunicaciones</a><a class="linkrubros" href="#">Construcción</a><a class="linkrubros" href="#">Cotillón</a><a class="linkrubros" href="#">Deportes</a><a class="linkrubros" href="#">Distribuidoras</a><a class="linkrubros" href="#">Electrodomésticos, audio y vid</a><a class="linkrubros" href="#">Estética</a><a class="linkrubros" href="#">Estudio contable</a>
-        </div>
-        <div class="w-col w-col-3"><a class="linkrubros" href="#">Fotografía</a><a class="linkrubros" href="#">Gestorías</a><a class="linkrubros" href="#">Gomerías</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a>
-        </div>
-        <div class="w-col w-col-3"><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a>
-        </div>
-        <div class="w-col w-col-3"><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a>
-        </div>
+
+         <div class="w-col w-col-3">
+
+           <a class="linkrubros" ng-repeat="rubro in rubros" ui-sref="app.rubros({rubroId: rubro.id})">
+
+             {{ rubro.nombre }}
+
+           </a>
+
+         </div>
+
       </div>
     </div>
   </div>
