@@ -96,7 +96,7 @@ angular.module('VGG')
 
                 {
 
-                  _descripcion: {
+                  descripcion: {
 
                     like: query + "%"
 
@@ -106,7 +106,7 @@ angular.module('VGG')
 
                 {
 
-                  _promocion: {
+                  promocion: {
 
                     like: query + "%"
 
@@ -147,7 +147,7 @@ angular.module('VGG')
 
   })
 
-  .controller('ComercioController', function($scope, $http, $stateParams, Comercio, Categoria, Mail) {
+  .controller('ComercioController', function($scope, $http, $modal, $stateParams, Comercio, Categoria, Mail) {
 
     if ($stateParams.consulta) {
 
@@ -282,6 +282,141 @@ angular.module('VGG')
       });
 
     };
+
+   $scope.editarComercio = function(comercioId) {
+
+     $modal.open({
+       templateUrl: 'views/comercios/editar.html',
+       size: 'lg',
+       resolve: {
+
+         comercio: function(Comercio) {
+
+           return Comercio.findById({id: comercioId});
+
+         }
+
+       },
+       controller: function($scope, $http, comercio) {
+
+         $scope.comercio = comercio;
+
+         var upload = function() {
+
+           var fd = new FormData();
+
+           angular.forEach($scope.file, function(file) {
+             fd.append('file', file);
+           });
+
+           angular.forEach($scope.slider, function(file) {
+             fd.append('file', file);
+           });
+
+           console.log($scope.slider);
+
+           console.log(fd);
+
+           $http.post('/api/containers/images/upload',
+             fd, {
+               transformRequest: angular.identity,
+               headers: {'Content-Type': undefined}
+             }
+           ).success(function(d){
+               console.log(d);
+               console.log($scope.files);
+             })
+             .error(function(e) {
+               console.log(e);
+             });
+         };
+
+        $scope.submitEdition = function() {
+
+          if ($scope.file) {
+            $http.put('/api/comercios/' + comercioId, {
+
+              nombre: $scope.comercio.nombre,
+              categoriaId: $scope.comercio.categoriaId,
+
+              direccion: $scope.comercio.direccion,
+              telefono: $scope.comercio.telefono,
+              horarios: $scope.comercio.horarios,
+              email: $scope.comercio.email,
+              pagina: $scope.comercio.pagina,
+
+              descripcion: $scope.comercio.descripcion,
+              promocion: $scope.comercio.promocion,
+
+              imagenComercio: $scope.file[0].name
+            })
+              .success(function(data) {
+                console.log(data);
+                upload();
+              })
+              .error(function(err) {
+                console.log(err);
+              });
+
+          } else if ($scope.files) {
+
+            $http.put('/api/comercios/' + comercioId, {
+
+              nombre: $scope.comercio.nombre,
+              categoriaId: $scope.comercio.categoriaId,
+
+              direccion: $scope.comercio.direccion,
+              telefono: $scope.comercio.telefono,
+              horarios: $scope.comercio.horarios,
+              email: $scope.comercio.email,
+              pagina: $scope.comercio.pagina,
+
+              descripcion: $scope.comercio.descripcion,
+              promocion: $scope.comercio.promocion,
+
+              imagenes: $scope.files
+            })
+              .success(function(data) {
+                console.log(data);
+                upload();
+              })
+              .error(function(err) {
+                console.log(err);
+              });
+
+          } else {
+
+            $http.put('/api/comercios/' + comercioId, {
+
+              nombre: $scope.comercio.nombre,
+              categoriaId: $scope.comercio.categoriaId,
+
+              direccion: $scope.comercio.direccion,
+              telefono: $scope.comercio.telefono,
+              horarios: $scope.comercio.horarios,
+              email: $scope.comercio.email,
+              pagina: $scope.comercio.pagina,
+
+              descripcion: $scope.comercio.descripcion,
+              promocion: $scope.comercio.promocion
+            })
+              .success(function(data) {
+                console.log(data);
+              })
+              .error(function(err) {
+                console.log(err);
+              });
+
+          }
+
+        }
+
+
+
+       }
+     });
+
+   } ;
 
    $scope.enviarEmail = function() {
 

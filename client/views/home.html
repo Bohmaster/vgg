@@ -1,89 +1,67 @@
-<div id="home">
-
-  <div class="w-section secslider">
-    <div class="w-slider slider" data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1">
-      <div class="w-slider-mask">
-        <div class="w-slide slide1"></div>
-        <div class="w-slide slide2"></div>
-        <div class="w-slide slide3"></div>
-        <div class="w-slide slide4"></div>
-        <div class="w-slide slide5"></div>
-      </div>
-      <div class="w-slider-arrow-left">
-        <div class="w-icon-slider-left"></div>
-      </div>
-      <div class="w-slider-arrow-right">
-        <div class="w-icon-slider-right"></div>
-      </div>
-      <div class="w-slider-nav w-shadow"></div>
+<div class="w-section secslider2" id="inicio">
+  <div class="w-slider slider2" data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1">
+    <div class="w-slider-mask">
+      <div class="w-slide slide21"></div>
+      <div class="w-slide slide22"></div>
+      <div class="w-slide slide23"></div>
+      <div class="w-slide slide24"></div>
     </div>
+    <div class="w-slider-arrow-left">
+      <div class="w-icon-slider-left"></div>
+    </div>
+    <div class="w-slider-arrow-right">
+      <div class="w-icon-slider-right"></div>
+    </div>
+    <div class="w-slider-nav w-round"></div>
   </div>
-  <div class="w-section secpublis">
-    <div class="w-container">
-      <div class="w-row">
-        <div class="w-col w-col-9 colpublis">
-          <div class="w-row">
+</div>
+<div class="w-section secslider">
+  <div class="w-slider slider" data-animation="slide" data-duration="500" data-infinite="1" data-delay="4000" data-autoplay="1">
+    <div class="w-slider-mask">
+      <div class="w-slide slide1"></div>
+      <div class="w-slide slide2"></div>
+      <div class="w-slide slide3"></div>
+      <div class="w-slide slide4"></div>
+      <div class="w-slide slide5"></div>
+    </div>
+    <div class="w-slider-arrow-left">
+      <div class="w-icon-slider-left"></div>
+    </div>
+    <div class="w-slider-arrow-right">
+      <div class="w-icon-slider-right"></div>
+    </div>
+    <div class="w-slider-nav w-shadow"></div>
+  </div>
+</div>
+<div class="incluyetodo">
+  <div class="w-section w-clearfix outer">
+    <div class="wrapper">
+     <div class="divpubli" data-ix="publis" ng-repeat="comercio in comercios" ui-sref="app.comercio({comercioId: comercio.id})">
+        <a class="w-inline-block linkpubli">
+          <div class="divlabel">
+            <div class="textpubli">{{comercio.nombre}}</div>
+            <div class="textpubli descripcion">{{ comercio.descripcion}}</div>
+          </div>
+          <img class="imgpubli" src="storage/images/{{comercio.imagenComercio}}">
+          <div class="w-clearfix divlabeldown">
+            <div class="textpubli down">{{ comercio.direccion | words: 3 }}</div>
+            <div class="textpubli descripcion down">{{ comercio.telefono}}</div>
+          </div>
+        </a>
+      </div>
 
-            <div class="w-col w-col-4" ng-repeat="comercio in comercios" ui-sref="app.comercio({comercioId: comercio.id})">
-              <div class="divpubli" data-ix="publis">
-                <a class="w-inline-block linkpubli" href="masinfo.html">
-                  <div class="divlabel">
-                    <div class="textpubli">VIVERO AVENIDA</div>
-                    <div class="textpubli descripcion">Todo para su jardin</div>
-                  </div>
-                  <div class="clickinfo">Click para más info</div><img class="imgpubli" src="storage/images/{{ comercio.imagenComercio }}">
-                  <div class="w-clearfix divlabeldown">
-                    <div class="textpubli down">AV.SAN MARTIN 1365 VGG</div>
-                    <div class="textpubli descripcion down">0341-5183408</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-        <div class="w-col w-col-3 colsidebar">
-          <div class="w-embed htmlclima">
-            <div style="width:220px; height:150px;">
-              <object type="application/x-shockwave-flash" data="http://swf.yowindow.com/yowidget3.swf" width="220" height="150">
-                <param name="movie" value="http://swf.yowindow.com/yowidget3.swf">
-                <param name="allowfullscreen" value="true">
-                <param name="wmode" value="opaque">
-                <param name="bgcolor" value="#FFFFFF">
-                <param name="flashvars" value="location_id=gn:3854985&amp;location_name=Gobernador%20Galvez&amp;time_format=24&amp;unit_system=metric&amp;lang=es&amp;background=#FFFFFF&amp;mini_locationBar=true&amp;mini_momentBar=true&amp;mini_action=window&amp;copyright_bar=false">
-                <a style="width:220px;height:150px;display: block;text-indent: -50000px;font-size: 0px;background:#DDF url(http://yowindow.com/img/logo.png) no-repeat scroll 50% 50%;" href="http://WeatherScreenSaver.com?client=widget&amp;link=copyright">Widget del tiempo atmosférico</a>
-              </object>
-            </div>
-            <div style="width: 220px; height: 15px; font-size: 14px; font-family: Arial,Helvetica,sans-serif;">
-              <span style="float:left;"><a target="_top" href="http://WeatherScreenSaver.com?client=widget&amp;link=copyright" style="color: #2fa900; font-weight:bold; text-decoration:none;" title="Widget del tiempo atmosférico">YoWindow.com</a></span>
-              <span style="float:right; color:#888888;"><a href="http://yr.no" style="color: #2fa900; text-decoration:none;">yr.no</a></span>
-            </div>
-          </div>
-          <div class="txtvisitas">Cantidad de &nbsp;visitas</div>
-          <div class="w-embed htmlcontador">
-            <!-- inicio codigo contador -->
-            <div>
-              <a href="http://hit-counter.info"><img style="border: 0px solid ; display: inline;" alt="hit counter tumblr" src="http://contador-de-visitas.com/hit.php?id=2262797&amp;counter=38">
-              </a>
-              <br><a href="http://hit-counter.info">hit counter</a>
-            </div>
-            <!-- fin codigo contador -->
-          </div>
-          <div class="divtapacont"></div>
-          <div class="w-embed">
-            <object width="300" height="400" id="flashWorldLeagues" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
-              <param name="movie" value="http://www.fifa.com/flash/widgets/worldmatchcentre/app.swf?leagueCode=arg&amp;lang=s">
-              <param name="bgcolor" value="#ffffff">
-              <param name="quality" value="high">
-              <param name="wmode" value="transparent">
-              <param name="flashvars" value="lang=s&amp;leagueCode=arg">
-              <embed width="220" height="400" flashvars="lang=s&amp;leagueCode=arg" wmode="transparent" quality="high" bgcolor="#ffffff" name="flashWorldLeagues" id="flashWorldLeagues" src="http://www.fifa.com/flash/widgets/worldmatchcentre/app.swf?leagueCode=arg&amp;lang=s" type="application/x-shockwave-flash">
-            </object>
-          </div>
-        </div>
+    </div>
+    <div class="inner">
+      <div class="divpublisidebar"><img class="b" src="images/papelera.jpg">
+      </div>
+      <div class="divpublisidebar"><img class="b" src="images/papelera.jpg">
+      </div>
+      <div class="divpublisidebar"><img class="b" src="images/papelera.jpg">
+      </div>
+      <div class="divpublisidebar"><img class="b" src="images/papelera.jpg">
+      </div>
+      <div class="divpublisidebar"><img class="b" src="images/papelera.jpg">
       </div>
     </div>
   </div>
-
 </div>

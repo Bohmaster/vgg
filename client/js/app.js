@@ -7,6 +7,8 @@ angular.module('VGG', [
   'ui.tinymce',
 
   'ngResource',
-  'lbServices'
+  'lbServices',
+
+  'truncate'
 
 ]);

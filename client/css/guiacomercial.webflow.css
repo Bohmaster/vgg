@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   background-color: white;
   font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, sans-serif;
   color: #333;
@@ -24,28 +25,21 @@ h2 {
   font-weight: 700;
 }
 h3 {
-  padding-bottom: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 19px;
   font-family: Questrial, sans-serif;
   color: #333;
   font-size: 24px;
   line-height: 30px;
-  font-weight: 900;
-  text-align: center;
-}
-
-.h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 35px !important;
-  line-height: 36px;
   font-weight: 700;
-  color: white !important;
+  text-align: center;
 }
 h4 {
   margin-top: 0px;
   margin-bottom: 5px;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: black;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -152,6 +146,7 @@ p {
   top: 0px;
   right: 0px;
   z-index: 10;
+  display: block;
   height: 80px;
   border-bottom: 0px none transparent;
   background-color: #f0a748;
@@ -190,25 +185,29 @@ p {
   margin-top: 0px;
 }
 .divsearch {
-  width: 300px;
+  display: block;
+  width: auto;
   height: 28px;
   margin-top: 9px;
-  float: right;
+  float: none;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   background-color: white;
 }
 .navlink {
-  padding: 8px 0px 9px 14px;
+  padding: 8px 0px 9px 21px;
   font-family: Questrial, sans-serif;
   color: #e8e8e1;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 .navlink:hover {
   color: black;
   font-weight: 400;
+}
+.navlink.w--current {
+  padding-top: 8px;
 }
 .secsubheader {
   position: fixed;
@@ -223,14 +222,17 @@ p {
 .buscar {
   padding-top: 4px;
   padding-left: 5px;
+  float: left;
   font-family: Varela, sans-serif;
-  color: #b0abab;
+  color: #3c3a3a;
+  font-size: 13px;
 }
 .secslider {
   position: relative;
   z-index: 2;
-  margin-top: 82px;
-  margin-bottom: 30px;
+  display: none;
+  margin-top: 170px;
+  box-shadow: black 0px 1px 13px 0px;
 }
 .slide1 {
   background-image: url('../images/portadaamecom.jpg');
@@ -238,7 +240,6 @@ p {
   background-repeat: no-repeat;
 }
 .slider {
-  width: auto;
   height: 333px;
 }
 .slide2 {
@@ -256,18 +257,23 @@ p {
   position: relative;
   height: auto;
   margin-top: 0px;
-  padding-top: 0px;
+  padding-top: 40px;
   background-color: transparent;
   opacity: 1;
 }
 .divpubli {
+  position: relative;
+  display: inline-block;
   overflow-x: visible;
   overflow-y: visible;
-  height: auto;
-  margin-top: 10px;
+  width: 250px;
+  height: 300px;
+  margin-top: 0px;
+  margin-left: 4px;
   padding-top: 0px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: none;
   background-color: transparent;
   -webkit-transform: none;
   -ms-transform: none;
@@ -287,7 +293,7 @@ p {
   padding-left: 9px;
   background-color: transparent;
   font-family: Audiowide, sans-serif;
-  color: black;
+  color: white;
   font-size: 15px;
   font-weight: 900;
   text-align: left;
@@ -306,6 +312,7 @@ p {
 .textpubli.down {
   padding-right: 15px;
   float: right;
+  color: white;
   font-size: 12px;
   font-weight: 400;
   text-align: right;
@@ -319,7 +326,7 @@ p {
   z-index: 0;
   display: block;
   width: auto;
-  height: auto;
+  height: 200px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -328,11 +335,10 @@ p {
   z-index: 2;
   width: auto;
   height: auto;
-  background-color: #f0a748;
+  background-color: #0098ff;
 }
-.divlabeldown {
+.divlabel.down {
   margin-top: -5px;
-  padding-top: 5px;
 }
 .imgesquinero {
   position: absolute;
@@ -344,7 +350,8 @@ p {
 }
 .divlabeldown {
   margin-top: -5px;
-  background-color: #4db7e8;
+  padding-top: 2px;
+  background-color: black;
 }
 .esquinerodown {
   position: absolute;
@@ -371,12 +378,13 @@ p {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 8;
+  z-index: 101;
   display: none;
   overflow-x: visible;
   overflow-y: visible;
   height: 300px;
-  margin-top: 83px;
+  margin-top: 148px;
+  border-bottom: 1px solid #0082f3;
   background-color: transparent;
 }
 .linkrubros {
@@ -414,22 +422,22 @@ p {
 .linklogo {
   position: relative;
   z-index: 0;
-  margin-top: 4px;
+  margin-top: 0px;
   float: left;
 }
 .navbarra {
   position: static;
   height: 38px;
-  margin-top: -32px;
-  background-color: #4db7e8;
+  margin-top: 0px;
+  padding-top: 2px;
+  background-color: transparent;
 }
 .contmenu {
   position: relative;
 }
 .colsidebar {
-  margin-top: 10px;
   height: auto;
-  background-color: lightgray;
+  background-color: white;
 }
 .colpublis {
   padding-top: 0px;
@@ -466,7 +474,7 @@ p {
   background-repeat: no-repeat;
 }
 .slide5 {
-  background-image: url('../images/cuartoslider.jpg');
+  background-image: url('../images/cuartoslider_1.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -496,7 +504,7 @@ p {
   overflow-y: scroll;
   height: 450px;
   padding-bottom: 16px;
-  background-color: rgba(0, 0, 0, 0.90);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .imgmasinfo {
   margin-top: 15px;
@@ -532,16 +540,17 @@ p {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 8;
+  z-index: 101;
   display: none;
   height: 300px;
-  margin-top: 83px;
+  margin-top: 148px;
   background-color: white;
 }
 .divtelefonos {
   height: 300px;
   margin-top: 0px;
   padding-top: 21px;
+  box-shadow: black 0px 1px 15px -4px;
   font-size: 15px;
 }
 .listitemtelefonos {
@@ -562,12 +571,21 @@ p {
   font-weight: 900;
   text-align: center;
 }
+.navmenuu {
+  display: block;
+  width: auto;
+  margin-top: -5px;
+  float: none;
+  color: #323030;
+  text-align: center;
+}
 .secrubrostel {
   background-color: #c21515;
 }
 .secinfo {
   height: auto;
-  margin-top: 85px;
+  margin-top: 0px;
+  padding-top: 170px;
 }
 .mapmasinfo {
   margin-top: 26px;
@@ -595,8 +613,9 @@ p {
   text-align: center;
 }
 .secclasificados {
-  margin-top: 99px;
+  margin-top: 0px;
   margin-bottom: 33px;
+  padding-top: 170px;
 }
 .txtclasif {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -615,7 +634,7 @@ p {
   display: block;
   margin-top: 13px;
   padding: 15px 5px 5px;
-  border: 1px solid #a3a0a0;
+  border: 3px solid #0082f3;
   color: #454343;
   text-decoration: none;
 }
@@ -623,15 +642,18 @@ p {
   margin-top: 45px;
 }
 .botonenviar {
-  display: block;
+  display: inline-block;
   margin-right: auto;
   margin-left: auto;
+  font-family: Abel, sans-serif;
+  font-size: 23px;
+  text-align: center;
 }
 .envienos {
   margin-bottom: 24px;
 }
 .rowdatos {
-  background: lightskyblue;
+  border: 2px solid #918d8d;
 }
 .sliderdatos {
   height: 400px;
@@ -648,9 +670,10 @@ p {
   background-repeat: no-repeat;
 }
 .secfooter {
-  height: 200px;
+  height: auto;
   margin-top: 40px;
-  background-color: #383636;
+  clear: both;
+  background-color: black;
 }
 .imgface {
   display: block;
@@ -674,11 +697,305 @@ p {
 .txtfooter {
   margin-top: 18px;
   padding-top: 15px;
+  padding-bottom: 18px;
   border-top: 1px solid #575454;
   font-family: Abel, sans-serif;
   color: white;
   font-size: 15px;
   text-align: center;
+}
+.secheader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  height: auto;
+}
+.contheader {
+  height: 40px;
+}
+.contheader.sup {
+  height: auto;
+}
+.contheader.med {
+  height: auto;
+}
+.contheader.inf {
+  height: auto;
+}
+.divheadersup {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  float: none;
+  background-color: black;
+  text-align: left;
+}
+.divheadermed {
+  position: relative;
+  height: 30px;
+  background-color: #ec144f;
+  color: #626060;
+}
+.imglogo {
+  display: block;
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.divheaderinf {
+  height: 45px;
+  background-color: #2f2d2e;
+}
+.secsidebar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 6;
+  display: none;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  width: auto;
+  height: auto;
+  margin-top: 170px;
+  background-color: #383636;
+}
+.secslider2 {
+  position: relative;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 170px;
+}
+.slide21 {
+  background-image: url('../images/portadaamecom.jpg');
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide22 {
+  height: 100%;
+  margin-top: 23px;
+  background-image: url('../images/titulo.jpg');
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide23 {
+  background-image: url('../images/rws.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide24 {
+  background-image: url('../images/medioslider.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slide25 {
+  background-image: url('../images/cuartoslider.jpg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.botonbuscar {
+  display: block;
+  width: 150px;
+  margin-top: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  float: right;
+  background-color: #0098ff;
+  font-family:'Fugaz One', sans-serif;
+  text-align: center;
+}
+.col {
+  margin-top: -11px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.wrapper {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 21px 0px;
+  float: left;
+  text-align: center;
+}
+.side {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: right;
+  background-color: #98c1dd;
+}
+.outer {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+}
+.inner {
+  position: absolute;
+  right: 0px;
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  background-color: #ec144f;
+}
+.largo {
+  height: 500px;
+  background-color: #070707;
+}
+.todo {
+  height: auto;
+  min-height: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.incluyetodo {
+  position: relative;
+  height: auto;
+}
+.divpublisidebar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 4px;
+  padding-bottom: 15px;
+  padding-left: 4px;
+  border: 1px none white;
+  text-align: center;
+}
+.reloj {
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+  z-index: 13;
+  display: block;
+  margin-top: 16px;
+  margin-right: 20px;
+  padding-right: 0px;
+  float: right;
+  clear: none;
+}
+.contclasi {
+  display: block;
+  margin-top: 48px;
+  background-color: white;
+}
+.divtelefono {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  width: 500px;
+  height: 35px;
+  margin-top: 44px;
+  margin-right: 27px;
+}
+.textcontactese {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0px;
+  padding-left: 26px;
+  font-family: Abel, sans-serif;
+  color: white;
+  font-size: 22px;
+}
+.teefono {
+  position: relative;
+  bottom: -4px;
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  padding-left: 18px;
+  font-family: Oswald, sans-serif;
+  color: #0082f3;
+  font-size: 23px;
+}
+.secform {
+  height: auto;
+  margin-top: 192px;
+  padding-top: 58px;
+}
+.logoctacto {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.textctacto {
+  padding-top: 27px;
+  padding-bottom: 0px;
+  font-family: Abel, sans-serif;
+  color: #908d8d;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+}
+.textfield {
+  margin-bottom: 26px;
+  font-family: Abel, sans-serif;
+  font-size: 23px;
+}
+.textarea {
+  font-family: Abel, sans-serif;
+  font-size: 23px;
+}
+.imgpubliheader {
+  position: absolute;
+  display: inline-block;
+  width: 550px;
+  height: 100px;
+  margin-left: 20px;
+  padding-top: 15px;
+  text-align: left;
+}
+.b {
+  border: 1px solid white;
+}
+.contopclasi {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 101;
+  display: none;
+  height: 92px;
+  margin-top: 148px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+.divopclasi {
+  position: relative;
+  display: block;
+  height: 92px;
+  padding-top: 7px;
+  box-shadow: black 0px 1px 15px -4px;
+  text-align: center;
+}
+.botonclasi {
+  margin-top: 20px;
+  background-color: #0082f3;
+  font-family: Questrial, sans-serif;
+  color: white;
+  font-size: 19px;
+}
+.botonclasi.w--current {
+  margin-top: 19px;
+  padding-top: 10px;
 }
 @media (max-width: 991px) {
   .navmenu {
@@ -689,7 +1006,7 @@ p {
     background-color: #a5c474;
   }
   .menuboton {
-    margin-top: -11px;
+    margin-top: -16px;
     background-color: transparent;
     color: white;
   }
@@ -706,11 +1023,15 @@ p {
     font-size: 14px;
     text-shadow: none;
   }
+  .divsearch {
+    position: relative;
+  }
   .navlink {
-    color: #4f4f4d;
+    color: #070707;
   }
   .slider {
     height: auto;
+    clear: none;
   }
   .divpubli {
     -webkit-transform: none;
@@ -738,7 +1059,7 @@ p {
     overflow-y: visible;
   }
   .contmenu {
-    z-index: 10;
+    z-index: 101;
     color: #333;
   }
   .htmlclima {
@@ -746,9 +1067,39 @@ p {
   }
   .navmenuu {
     position: relative;
-    margin-top: 4px;
-    background-color: #4db7e8;
+    margin-top: -2px;
+    background-color: white;
     color: #333;
+  }
+  .divheadermed {
+    z-index: 101;
+  }
+  .secsidebar {
+    width: auto;
+  }
+  .slider2 {
+    height: 200px;
+  }
+  .botonbuscar {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    float: right;
+  }
+  .inner {
+    display: block;
+  }
+  .divtelefono {
+    position: absolute;
+  }
+  .imgpubliheader {
+    display: none;
+  }
+  .contopclasi {
+    display: block;
+  }
+  .botonclasi {
+    margin-top: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -768,6 +1119,12 @@ p {
     font-size: 13px;
     text-shadow: none;
   }
+  .divsearch {
+    width: auto;
+    margin-right: 6px;
+    margin-left: 6px;
+    padding-right: 0px;
+  }
   .secslider {
     height: 189px;
   }
@@ -782,7 +1139,8 @@ p {
   }
   .divpubli {
     display: block;
-    width: 51%;
+    width: 50%;
+    height: 300px;
     margin-right: auto;
     margin-left: auto;
     -webkit-transform: none;
@@ -803,7 +1161,7 @@ p {
     height: 200px;
   }
   .linklogo {
-    margin-left: 4px;
+    margin-left: 11px;
   }
   .colsidebar {
     margin-top: 20px;
@@ -824,10 +1182,50 @@ p {
     overflow-x: auto;
     overflow-y: auto;
   }
+  .slider2 {
+    height: 200px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .inner {
+    display: none;
+    width: 0%;
+  }
+  .divtelefono {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    margin-right: 122px;
+    text-align: right;
+  }
+  .textcontactese {
+    font-size: 17px;
+  }
+  .teefono {
+    display: block;
+  }
+  .divdatoscontacto {
+    margin-bottom: 27px;
+  }
+  .contopclasi {
+    display: block;
+    height: 140px;
+    background-color: white;
+  }
+  .divopclasi {
+    height: 140px;
+    padding-top: 2px;
+  }
+  .botonclasi.w--current {
+    margin-bottom: 10px;
+    padding-top: 8px;
+  }
 }
 @media (max-width: 479px) {
   .menuboton {
-    margin-top: -11px;
+    margin-top: -16px;
   }
   .textlogo {
     font-size: 17px;
@@ -839,6 +1237,13 @@ p {
     margin-left: 58px;
     font-size: 9px;
     text-shadow: none;
+  }
+  .divsearch {
+    width: auto;
+    margin-top: 9px;
+  }
+  .buscar {
+    font-size: 10px;
   }
   .slide1 {
     height: auto;
@@ -866,13 +1271,36 @@ p {
     height: 300px;
   }
   .linklogo {
-    width: 14.3%;
+    width: auto;
   }
   .colsidebar {
     margin-top: 1px;
   }
   .conttelefonos {
     margin-top: 83px;
+  }
+  .secsidebar {
+    display: none;
+  }
+  .slider2 {
+    height: 200px;
+  }
+  .botonbuscar {
+    width: 80px;
+    margin-top: -7px;
+  }
+  .reloj {
+    width: 23%;
+    margin-top: 30px;
+  }
+  .textcontactese {
+    display: none;
+    font-size: 8px;
+  }
+  .teefono {
+    display: inline-block;
+    margin-top: 45px;
+    font-size: 13px;
   }
 }
 

@@ -21,6 +21,7 @@
   <script src="vendor/tinymce-dist/tinymce.js"></script>
   <script src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="vendor/angular-truncate/src/truncate.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
@@ -46,84 +47,91 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="w-section sec-header">
-  <div class="w-container" style="position: relative;">
-    <a class="w-inline-block linklogo" href="#"><img src="images/logo.png" width="68" ui-sref="app.home">
-    </a>
-    <h2 class="textlogo">GUIA COMERCIAL</h2>
-    <div style="position: absolute; right: 5px; top: 8px;">
-      <input placeholder="Buscar..." ng-model="consulta">
-      <button ng-click="buscar()">Buscar</button>
+<div class="todo">
+  <div class="w-section secheader">
+    <div class="w-clearfix divheadersup">
+      <a class="w-inline-block linklogo" href="index.html"><img class="imglogo" width="191" src="images/logo2.png">
+      </a><img class="imgpubliheader" width="424" src="images/banner.jpg">
+      <img class="reloj" width="82" src="images/reloj.png">
     </div>
-  </div>
-  <div class="w-nav navbarra" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
-    <div class="w-container contmenu">
-      <div class="text2logo">Villa Gobernador Gálvez y región</div>
-      <nav class="w-nav-menu navmenuu" role="navigation"><a class="w-nav-link navlink" href="#">Inicio</a><a class="w-nav-link navlink" href="#">Promoguía</a><a class="w-nav-link navlink rubros" href="#" data-ix="rubros">Rubros</a><a class="w-nav-link navlink" href="#" data-ix="telefonos">Teléfonos útiles</a><a class="w-nav-link navlink" href="clasificados.html" target="_blank">Clasificados</a><a class="w-nav-link navlink" href="#">Contacto</a>
-      </nav>
-      <div class="w-nav-button menuboton">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="w-section secrubrostel">
-  <div class="w-container contrubros" data-ix="contenedor-rubros">
-    <div class="divrubros" data-ix="rubros">
-      <div class="w-row">
-
-         <div class="w-col w-col-3">
-
-           <a class="linkrubros" ng-repeat="rubro in rubros" ui-sref="app.rubros({rubroId: rubro.id})">
-
-             {{ rubro.nombre }}
-
-           </a>
-
-         </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="w-container conttelefonos" data-ix="contenedor-telefonos">
-    <div class="divtelefonos" data-ix="rubros">
-      <div class="w-row">
-        <div class="w-col w-col-6">
-          <ul>
-            <li class="listitemtelefonos">911 &nbsp;Comando Radioeléctrico</li>
-            <li class="listitemtelefonos">100 Bomberos</li>
-            <li class="listitemtelefonos">101 &nbsp;Policía</li>
-            <li class="listitemtelefonos">107 &nbsp;Hospital</li>
-          </ul>
+    <div class="divheadermed">
+      <div class="w-container contheader med">
+        <div class="w-nav navbarra" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+          <div class="w-container contmenu">
+            <nav class="w-nav-menu navmenuu" role="navigation"><a class="w-nav-link navlink" href="index.html">Inicio</a><a class="w-nav-link navlink" href="#">Promoguía</a><a class="w-nav-link navlink rubros" href="#" data-ix="rubros">Rubros</a><a class="w-nav-link navlink" href="#" data-ix="telefonos">Teléfonos útiles</a><a class="w-nav-link navlink" href="#" target="_blank" data-ix="opclasi">Clasificados</a><a class="w-nav-link navlink" href="contacto.html">Contacto</a>
+            </nav>
+            <div class="w-nav-button menuboton">
+              <div class="w-icon-nav-menu"></div>
+            </div>
+          </div>
         </div>
-        <div class="w-col w-col-6">
-          <ul>
-            <li class="listitemtelefonos">Comisaría 481101 / 480330 / 488500 / 517315</li>
-            <li class="listitemtelefonos">Bomberos 483000 / 481380 / 484995</li>
-            <li class="listitemtelefonos">Hospital 480391 / 481115</li>
-            <li class="listitemtelefonos">&nbsp;S. Integrados consultorios 481337 / internación 481270</li>
-            <li class="listitemtelefonos">Municipalidad 481127 / 485005 / 481130</li>
-            <li class="listitemtelefonos">Cooperativa Eléctrica reclamos 431720</li>
-            <li class="listitemtelefonos">Litoral Gas Emergencia 0800-777-5427</li>
-            <li class="listitemtelefonos">Aguas Santafesinas 0810-777-2000</li>
-            <li class="listitemtelefonos">ANSES 130</li>
-          </ul>
+      </div>
+    </div>
+    <div class="divheaderinf">
+      <div class="w-container contheader inf">
+        <div class="w-clearfix divsearch">
+          <input class="buscar" style="border: 0; width: 80%; height: 100%;" placeholder="ENCONTRA LO QUE ESTAS BUSCANDO" ng-model="consulta"><a class="w-button botonbuscar" href="#" ng-click="buscar()">Buscar</a>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="w-section secrubrostel">
+    <div class="w-container contrubros" data-ix="contenedor-rubros">
+      <div class="divrubros" data-ix="rubros">
+        <div class="w-row">
+          <div class="w-col w-col-3"><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos y bebidas</a><a class="linkrubros" href="#">Alquiler de cabañas</a><a class="linkrubros" href="#">Automotores</a><a class="linkrubros" href="#">Bares y restoranes</a><a class="linkrubros" href="#">Bicicleterías</a><a class="linkrubros" href="#">Comunicaciones</a><a class="linkrubros" href="#">Construcción</a><a class="linkrubros" href="#">Cotillón</a><a class="linkrubros" href="#">Deportes</a><a class="linkrubros" href="#">Distribuidoras</a><a class="linkrubros" href="#">Electrodomésticos, audio y vid</a><a class="linkrubros" href="#">Estética</a><a class="linkrubros" href="#">Estudio contable</a>
+          </div>
+          <div class="w-col w-col-3"><a class="linkrubros" href="#">Fotografía</a><a class="linkrubros" href="#">Gestorías</a><a class="linkrubros" href="#">Gomerías</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a>
+          </div>
+          <div class="w-col w-col-3"><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a>
+          </div>
+          <div class="w-col w-col-3"><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a><a class="linkrubros" href="#">Alimentos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-container conttelefonos" data-ix="contenedor-telefonos">
+      <div class="divtelefonos" data-ix="rubros">
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <ul>
+              <li class="listitemtelefonos">911 &nbsp;Comando Radioeléctrico</li>
+              <li class="listitemtelefonos">100 Bomberos</li>
+              <li class="listitemtelefonos">101 &nbsp;Policía</li>
+              <li class="listitemtelefonos">107 &nbsp;Hospital</li>
+            </ul>
+          </div>
+          <div class="w-col w-col-6">
+            <ul>
+              <li class="listitemtelefonos">Comisaría 481101 / 480330 / 488500 / 517315</li>
+              <li class="listitemtelefonos">Bomberos 483000 / 481380 / 484995</li>
+              <li class="listitemtelefonos">Hospital 480391 / 481115</li>
+              <li class="listitemtelefonos">&nbsp;S. Integrados consultorios 481337 / internación 481270</li>
+              <li class="listitemtelefonos">Municipalidad 481127 / 485005 / 481130</li>
+              <li class="listitemtelefonos">Cooperativa Eléctrica reclamos 431720</li>
+              <li class="listitemtelefonos">Litoral Gas Emergencia 0800-777-5427</li>
+              <li class="listitemtelefonos">Aguas Santafesinas 0810-777-2000</li>
+              <li class="listitemtelefonos">ANSES 130</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<ui-view></ui-view>
+  </div>
+
+  <ui-view></ui-view>
+
+</div>
 
 <div class="w-section secfooter">
   <div class="w-container">
     <div class="w-row">
-      <div class="w-col w-col-4"><img class="imgface" src="images/d3f453_0c4742be1c944336acc16fd39eb6c6d1.png" width="54">
+      <div class="w-col w-col-4"><img class="imgface" width="54" src="images/d3f453_0c4742be1c944336acc16fd39eb6c6d1.png">
       </div>
-      <div class="w-col w-col-4"><img class="imgvgg" src="images/10407422_770847336332279_7575097572660087944_n.png" width="105">
+      <div class="w-col w-col-4"><img class="imgvgg" width="105" src="images/10407422_770847336332279_7575097572660087944_n.png">
       </div>
-      <div class="w-col w-col-4"><img class="imgtelvgg" src="images/images.jpg" width="93">
+      <div class="w-col w-col-4"><img class="imgtelvgg" width="93" src="images/images.jpg">
       </div>
     </div>
   </div>
